@@ -16,7 +16,7 @@
         I will need your help.
       </p>
     <p>
-      You cannot find me fully functional yet as getting ready to release a great page.
+      You cannot find me fully functional yet as getting ready to release a great personal page.
       See the address bellow:
     </p>
 
@@ -41,9 +41,18 @@
           <th> Eletronic , Acoustic </th>
         </tr>
         <tr>
-         <th> new </th>
+         <th> Articles </th>
+         <th> Languages </th>
         </tr>
-        
+        <div ng-controller="gridListDemoCtrl as vm" flex="" ng-cloak="" class="gridListdemoDynamicTiles" ng-app="MyApp">
+  <md-grid-list md-cols="1" md-cols-sm="2" md-cols-md="3" md-cols-gt-md="6" md-row-height-gt-md="1:1" md-row-height="4:3" md-gutter="8px" md-gutter-gt-sm="4px">
+
+    <md-grid-tile ng-repeat="tile in vm.tiles" md-rowspan="{{tile.span.row}}" md-colspan="{{tile.span.col}}" md-colspan-sm="1" ng-class="tile.background">
+      <md-icon md-svg-icon="{{tile.icon}}"></md-icon>
+      <md-grid-tile-footer><h3>{{tile.title}}</h3></md-grid-tile-footer>
+    </md-grid-tile>
+  </md-grid-list>
+</div>
         </table>
         PS:.    PAYMENT METHODS: PAYPAL, BIT COIN, Champagne.
         <p>
